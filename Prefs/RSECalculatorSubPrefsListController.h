@@ -11,8 +11,8 @@
 @end
 
 @interface RSECalculatorSubPrefsListController : HBListController
-@property(nonatomic, retain)UISwitch* enableSwitch;
-@property(nonatomic, retain)UILabel* titleLabel;
+@property (nonatomic, strong) UISwitch* enableSwitch;
+@property (nonatomic, strong) UILabel* titleLabel;
 - (void)toggleState;
 - (void)setEnableSwitchState;
 - (void)setCellForRowAtIndexPath:(NSIndexPath *)indexPath enabled:(BOOL)enabled;

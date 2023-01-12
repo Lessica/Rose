@@ -1,10 +1,9 @@
-TWEAK_NAME = RoseTwitter
-$(TWEAK_NAME)_FILES = Tweak.x
-$(TWEAK_NAME)_FRAMEWORKS = UIKit
-$(TWEAK_NAME)_CFLAGS = -fobjc-arc
-$(TWEAK_NAME)_LIBRARIES = Rose
-$(TWEAK_NAME)_EXTRA_FRAMEWORKS = Cephei
-ADDITIONAL_CFLAGS += -DTHEOS_LEAN_AND_MEAN
+TWEAK_NAME := RoseTwitter
+RoseTwitter_FILES += Tweak.x
+RoseTwitter_FRAMEWORKS += UIKit
+RoseTwitter_CFLAGS += -fobjc-arc
+RoseTwitter_LIBRARIES += Rose
+RoseTwitter_EXTRA_FRAMEWORKS += Cephei
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/tweak.mk

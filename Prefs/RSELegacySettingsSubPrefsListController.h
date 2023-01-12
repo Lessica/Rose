@@ -9,5 +9,5 @@
 @end
 
 @interface RSELegacySettingsSubPrefsListController : HBListController
-@property(nonatomic, retain)UILabel* titleLabel;
+@property (nonatomic, strong) UILabel* titleLabel;
 @end

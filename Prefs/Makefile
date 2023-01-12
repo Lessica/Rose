@@ -1,11 +1,12 @@
-BUNDLE_NAME = RosePrefs
-$(BUNDLE_NAME)_FILES = $(wildcard *.m)
-$(BUNDLE_NAME)_INSTALL_PATH = /Library/PreferenceBundles
-$(BUNDLE_NAME)_FRAMEWORKS = UIKit
-$(BUNDLE_NAME)_LIBRARIES = Rose
-$(BUNDLE_NAME)_PRIVATE_FRAMEWORKS = Preferences
-$(BUNDLE_NAME)_EXTRA_FRAMEWORKS = Cephei CepheiPrefs
-ADDITIONAL_CFLAGS += -DTHEOS_LEAN_AND_MEAN
+BUNDLE_NAME := RosePrefs
+RosePrefs_FILES += $(wildcard *.m)
+RosePrefs_CFLAGS += -fobjc-arc -Iinclude -DTHEOS_LEAN_AND_MEAN
+RosePrefs_LDFLAGS += -L$(THEOS_OBJ_DIR)
+RosePrefs_FRAMEWORKS += UIKit
+RosePrefs_LIBRARIES += Rose
+RosePrefs_PRIVATE_FRAMEWORKS += Preferences
+RosePrefs_EXTRA_FRAMEWORKS += Cephei CepheiPrefs
+RosePrefs_INSTALL_PATH += /Library/PreferenceBundles
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/bundle.mk

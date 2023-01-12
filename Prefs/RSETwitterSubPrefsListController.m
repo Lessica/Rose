@@ -49,7 +49,7 @@ BOOL enableTwitterSection = NO;
     NSString *sub = [specifier propertyForKey:@"RSESub"];
     NSString *title = [specifier name];
 
-    _specifiers = [[self loadSpecifiersFromPlistName:sub target:self] retain];
+    _specifiers = [[self loadSpecifiersFromPlistName:sub target:self] copy];
 
     [self setTitle:title];
     [self.navigationItem setTitle:title];

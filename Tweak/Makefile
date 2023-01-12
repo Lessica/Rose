@@ -1,9 +1,9 @@
-TWEAK_NAME = Rose
-$(TWEAK_NAME)_FILES = Tweak.x
-$(TWEAK_NAME)_CFLAGS = -fobjc-arc
-$(TWEAK_NAME)_EXTRA_FRAMEWORKS = Cephei
-$(TWEAK_NAME)_LIBRARIES = Rose
-ADDITIONAL_CFLAGS += -DTHEOS_LEAN_AND_MEAN
+TWEAK_NAME := Rose
+Rose_FILES += Tweak.x
+Rose_CFLAGS += -fobjc-arc -Iinclude -DTHEOS_LEAN_AND_MEAN
+Rose_LDFLAGS += -L$(THEOS_OBJ_DIR)
+Rose_LIBRARIES += Rose
+Rose_EXTRA_FRAMEWORKS += Cephei
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/tweak.mk
