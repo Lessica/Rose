@@ -76,9 +76,6 @@
 			<key>validValues</key>
 			<array>
 				<integer>0</integer>
-				<integer>1</integer>
-				<integer>2</integer>
-				<integer>3</integer>
 				<integer>4</integer>
 				<integer>5</integer>
 				<integer>6</integer>
@@ -88,9 +85,6 @@
 			<key>validTitles</key>
 			<array>
 				<string>None</string>
-				<string>Light: Haptic Engine</string>
-				<string>Medium: Haptic Engine</string>
-				<string>Heavy: Haptic Engine</string>
 				<string>Light: Taptic Engine</string>
 				<string>Medium: Taptic Engine</string>
 				<string>Strong: Taptic Engine</string>
@@ -116,9 +110,6 @@
 			<key>validValues</key>
 			<array>
 				<integer>0</integer>
-				<integer>1</integer>
-				<integer>2</integer>
-				<integer>3</integer>
 				<integer>4</integer>
 				<integer>5</integer>
 				<integer>6</integer>
@@ -128,9 +119,6 @@
 			<key>validTitles</key>
 			<array>
 				<string>None</string>
-				<string>Light: Haptic Engine</string>
-				<string>Medium: Haptic Engine</string>
-				<string>Heavy: Haptic Engine</string>
 				<string>Light: Taptic Engine</string>
 				<string>Medium: Taptic Engine</string>
 				<string>Strong: Taptic Engine</string>
@@ -156,9 +144,6 @@
 			<key>validValues</key>
 			<array>
 				<integer>0</integer>
-				<integer>1</integer>
-				<integer>2</integer>
-				<integer>3</integer>
 				<integer>4</integer>
 				<integer>5</integer>
 				<integer>6</integer>
@@ -168,9 +153,6 @@
 			<key>validTitles</key>
 			<array>
 				<string>None</string>
-				<string>Light: Haptic Engine</string>
-				<string>Medium: Haptic Engine</string>
-				<string>Heavy: Haptic Engine</string>
 				<string>Light: Taptic Engine</string>
 				<string>Medium: Taptic Engine</string>
 				<string>Strong: Taptic Engine</string>

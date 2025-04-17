@@ -51,11 +51,11 @@ if ((LowPowerModeSwitch && LowPowerMode) || (isDNDActiveSwitch && isDNDActive) |
 
 	if (strength > 0 && strength < 4) {
 		if (strength == 1)
-			AudioServicesPlaySystemSound(1519);
+			strength = 4;
 		else if (strength == 2)
-			AudioServicesPlaySystemSound(1520);
+			strength = 5;
 		else if (strength == 3)
-			AudioServicesPlaySystemSound(1521);
+			strength = 6;
 	}
 
 	if (strength > 3 && strength < 9) {
@@ -111,7 +111,7 @@ void AudioServicesPlaySystemSoundWithVibration(UInt32 inSystemSoundID, id arg, N
     [dict setObject:arr forKey:@"VibePattern"];
     [dict setObject:[NSNumber numberWithFloat:intensivity] forKey:@"Intensity"];
 
-    AudioServicesPlaySystemSoundWithVibration(4095,nil,dict);
+    AudioServicesPlaySystemSoundWithVibration(4095, nil, dict);
 
 }
 
@@ -131,7 +131,7 @@ void AudioServicesPlaySystemSoundWithVibration(UInt32 inSystemSoundID, id arg, N
 			else if (selectedLegacyMode == 1)
 				[self prepareLegacyFeedback:customLegacyDuration intensivity:customLegacyStrength count:1];
 		});
-		
+
 	}
 
 }
