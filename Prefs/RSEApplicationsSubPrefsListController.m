@@ -71,12 +71,12 @@ BOOL enableApplicationsSection = NO;
 
 - (void)toggleState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]) {
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]) {
         enableApplicationsSection = YES;
         [preferences setBool:enableApplicationsSection forKey:@"EnableApplicationsSection"];
         [self toggleCellState:YES];
@@ -87,7 +87,7 @@ BOOL enableApplicationsSection = NO;
     } else if ([[preferences objectForKey:@"EnableApplicationsSection"] isEqual:@(NO)]) {
         enableApplicationsSection = YES;
         [preferences setBool:enableApplicationsSection forKey:@"EnableApplicationsSection"];
-        [self toggleCellState:YES];   
+        [self toggleCellState:YES];
     } else if ([[preferences objectForKey:@"EnableApplicationsSection"] isEqual:@(YES)]) {
         enableApplicationsSection = NO;
         [preferences setBool:enableApplicationsSection forKey:@"EnableApplicationsSection"];
@@ -98,12 +98,12 @@ BOOL enableApplicationsSection = NO;
 
 - (void)setEnableSwitchState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]){
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]){
         [[self enableSwitch] setOn:NO animated:YES];
         [self toggleCellState:NO];
     } else if (![allKeys containsObject:@"EnableApplicationsSection"]) {
@@ -121,12 +121,12 @@ BOOL enableApplicationsSection = NO;
 
 - (void)setCellState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]){
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]){
         [self toggleCellState:NO];
     } else if (![allKeys containsObject:@"EnableApplicationsSection"]) {
         [self toggleCellState:NO];

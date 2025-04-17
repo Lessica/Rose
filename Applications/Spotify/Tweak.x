@@ -68,17 +68,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTplayButtonSwitch) return;
-	int customStrength = [customStrengthSPTplayButtonControl intValue];
+    if (!SPTplayButtonSwitch) return;
+    int customStrength = [customStrengthSPTplayButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -88,17 +88,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTpreviousTrackButtonSwitch) return;
-	int customStrength = [customStrengthSPTpreviousTrackButtonControl intValue];
+    if (!SPTpreviousTrackButtonSwitch) return;
+    int customStrength = [customStrengthSPTpreviousTrackButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -108,17 +108,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTnextTrackButtonSwitch) return;
-	int customStrength = [customStrengthSPTnextTrackButtonControl intValue];
+    if (!SPTnextTrackButtonSwitch) return;
+    int customStrength = [customStrengthSPTnextTrackButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -128,17 +128,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTrepeatButtonSwitch) return;
-	int customStrength = [customStrengthSPTrepeatButtonControl intValue];
+    if (!SPTrepeatButtonSwitch) return;
+    int customStrength = [customStrengthSPTrepeatButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -148,17 +148,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTshuffleButtonSwitch) return;
-	int customStrength = [customStrengthSPTshuffleButtonControl intValue];
+    if (!SPTshuffleButtonSwitch) return;
+    int customStrength = [customStrengthSPTshuffleButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -168,17 +168,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTqueueButtonSwitch) return;
-	int customStrength = [customStrengthSPTqueueButtonControl intValue];
+    if (!SPTqueueButtonSwitch) return;
+    int customStrength = [customStrengthSPTqueueButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -188,17 +188,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTsliderSwitch) return;
-	int customStrength = [customStrengthSPTsliderControl intValue];
+    if (!SPTsliderSwitch) return;
+    int customStrength = [customStrengthSPTsliderControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -208,17 +208,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTfreeTierButtonSwitch) return;
-	int customStrength = [customStrengthSPTfreeTierButtonControl intValue];
+    if (!SPTfreeTierButtonSwitch) return;
+    int customStrength = [customStrengthSPTfreeTierButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -228,17 +228,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTavailableDevicesButtonSwitch) return;
-	int customStrength = [customStrengthSPTavailableDevicesButtonControl intValue];
+    if (!SPTavailableDevicesButtonSwitch) return;
+    int customStrength = [customStrengthSPTavailableDevicesButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -248,17 +248,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTnowPlayingLabelSwitch) return;
-	int customStrength = [customStrengthSPTnowPlayingLabelControl intValue];
+    if (!SPTnowPlayingLabelSwitch) return;
+    int customStrength = [customStrengthSPTnowPlayingLabelControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -268,17 +268,17 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTplayBarButtonSwitch) return;
-	int customStrength = [customStrengthSPTplayBarButtonControl intValue];
+    if (!SPTplayBarButtonSwitch) return;
+    int customStrength = [customStrengthSPTplayBarButtonControl intValue];
 
-	if (customStrength == 0 && !enableLegacyEngineSwitch)
-		[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-	else if (customStrength != 0 && !enableLegacyEngineSwitch)
-		[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-	else if (customStrength == 0 && enableLegacyEngineSwitch)
-		[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+    if (customStrength == 0 && !enableLegacyEngineSwitch)
+        [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+    else if (customStrength != 0 && !enableLegacyEngineSwitch)
+        [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+    else if (customStrength == 0 && enableLegacyEngineSwitch)
+        [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
 }
 
@@ -288,22 +288,22 @@ BOOL isRingerSilentSwitch;
 
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2 {
 
-	%orig;
+    %orig;
 
-	if (!SPTplaylistButtonsSwitch) return;
-	UIViewController* ancestor = [self _viewControllerForAncestor];
+    if (!SPTplaylistButtonsSwitch) return;
+    UIViewController* ancestor = [self _viewControllerForAncestor];
 
-	if ([ancestor isKindOfClass: %c(SPTFreeTierPlaylistVISREFHeaderViewController)]) {
-		int customStrength = [customStrengthSPTplaylistButtonsControl intValue];
+    if ([ancestor isKindOfClass: %c(SPTFreeTierPlaylistVISREFHeaderViewController)]) {
+        int customStrength = [customStrengthSPTplaylistButtonsControl intValue];
 
-		if (customStrength == 0 && !enableLegacyEngineSwitch)
-			[libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
-		else if (customStrength != 0 && !enableLegacyEngineSwitch)
-			[libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
-		else if (customStrength == 0 && enableLegacyEngineSwitch)
-			[libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
+        if (customStrength == 0 && !enableLegacyEngineSwitch)
+            [libRose triggerFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
+        else if (customStrength != 0 && !enableLegacyEngineSwitch)
+            [libRose triggerCustomFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customStrength];
+        else if (customStrength == 0 && enableLegacyEngineSwitch)
+            [libRose triggerLegacyFeedback:LowPowerModeSwitch :LowPowerMode :isDNDActiveSwitch :isDNDActive :isRingerSilentSwitch :isRingerSilent :delaySwitch :delayLVL :enabled :enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :customLegacyDuration :customLegacyStrength :selectedLegacyMode];
 
-	}
+    }
 
 }
 
@@ -315,62 +315,66 @@ BOOL isRingerSilentSwitch;
 
     preferences = [[HBPreferences alloc] initWithIdentifier:@"love.litten.rosepreferences"];
 
-	[preferences registerBool:&enabled default:nil forKey:@"Enabled"];
-	[preferences registerBool:&enableExceptionsSection default:nil forKey:@"EnableExceptionsSection"];
-	[preferences registerBool:&enableSpotifySection default:nil forKey:@"EnableSpotifySection"];
-	
-	[preferences registerBool:&enableTapticEngineSwitch default:NO forKey:@"enableTapticEngine"];
-	[preferences registerBool:&enableHapticEngineSwitch default:NO forKey:@"enableHapticEngine"];
-	[preferences registerBool:&enableLegacyEngineSwitch default:NO forKey:@"enableLegacyEngine"];
+    [preferences registerBool:&enabled default:nil forKey:@"Enabled"];
+    [preferences registerBool:&enableExceptionsSection default:nil forKey:@"EnableExceptionsSection"];
+    [preferences registerBool:&enableSpotifySection default:nil forKey:@"EnableSpotifySection"];
 
-	[preferences registerObject:&tapticLevel default:@"0" forKey:@"TapticStrength"];
+    [preferences registerBool:&enableTapticEngineSwitch default:YES forKey:@"enableTapticEngine"];
+    [preferences registerBool:&enableHapticEngineSwitch default:NO forKey:@"enableHapticEngine"];
+    [preferences registerBool:&enableLegacyEngineSwitch default:NO forKey:@"enableLegacyEngine"];
+
+    enableTapticEngineSwitch = YES;
+    enableHapticEngineSwitch = NO;
+    enableLegacyEngineSwitch = NO;
+
+    [preferences registerObject:&tapticLevel default:@"0" forKey:@"TapticStrength"];
     [preferences registerObject:&hapticLevel default:@"0" forKey:@"HapticStrength"];
-	[preferences registerObject:&legacyLevel default:@"0" forKey:@"LegacyStrength"];
+    [preferences registerObject:&legacyLevel default:@"0" forKey:@"LegacyStrength"];
 
-	[preferences registerObject:&customlegacyDurationLevel default:@"0" forKey:@"customLegacyDuration"];
-	[preferences registerObject:&customlegacyStrengthLevel default:@"0" forKey:@"customLegacyStrength"];
+    [preferences registerObject:&customlegacyDurationLevel default:@"0" forKey:@"customLegacyDuration"];
+    [preferences registerObject:&customlegacyStrengthLevel default:@"0" forKey:@"customLegacyStrength"];
 
-	if (enableExceptionsSection) {
-		[preferences registerBool:&LowPowerModeSwitch default:NO forKey:@"lowPowerMode"];
-		[preferences registerBool:&isDNDActiveSwitch default:NO forKey:@"isDNDActive"];
-		[preferences registerBool:&isRingerSilentSwitch default:NO forKey:@"isRingerSilent"];
-	}
+    if (enableExceptionsSection) {
+        [preferences registerBool:&LowPowerModeSwitch default:NO forKey:@"lowPowerMode"];
+        [preferences registerBool:&isDNDActiveSwitch default:NO forKey:@"isDNDActive"];
+        [preferences registerBool:&isRingerSilentSwitch default:NO forKey:@"isRingerSilent"];
+    }
 
-	if (enableSpotifySection) {
-		[preferences registerBool:&SPTplayButtonSwitch default:NO forKey:@"SPTplayButton"];
-		[preferences registerBool:&SPTplayBarButtonSwitch default:NO forKey:@"SPTplayBarButton"];
-		[preferences registerBool:&SPTpreviousTrackButtonSwitch default:NO forKey:@"SPTpreviousTrackButton"];
-		[preferences registerBool:&SPTnextTrackButtonSwitch default:NO forKey:@"SPTnextTrackButton"];
-		[preferences registerBool:&SPTrepeatButtonSwitch default:NO forKey:@"SPTrepeatButton"];
-		[preferences registerBool:&SPTshuffleButtonSwitch default:NO forKey:@"SPTshuffleButton"];
-		[preferences registerBool:&SPTqueueButtonSwitch default:NO forKey:@"SPTqueueButton"];
-		[preferences registerBool:&SPTsliderSwitch default:NO forKey:@"SPTslider"];
-		[preferences registerBool:&SPTfreeTierButtonSwitch default:NO forKey:@"SPTfreeTierButton"];
-		[preferences registerBool:&SPTavailableDevicesButtonSwitch default:NO forKey:@"SPTavailableDevicesButton"];
-		[preferences registerBool:&SPTnowPlayingLabelSwitch default:NO forKey:@"SPTnowPlayingLabel"];
-		[preferences registerBool:&SPTplaylistButtonsSwitch default:NO forKey:@"SPTplaylistButtons"];
-		[preferences registerObject:&customStrengthSPTplayButtonControl default:@"0" forKey:@"customStrengthSPTplayButton"];
-		[preferences registerObject:&customStrengthSPTplayBarButtonControl default:@"0" forKey:@"customStrengthSPTplayBarButton"];
-		[preferences registerObject:&customStrengthSPTpreviousTrackButtonControl default:@"0" forKey:@"customStrengthSPTpreviousTrackButton"];
-		[preferences registerObject:&customStrengthSPTnextTrackButtonControl default:@"0" forKey:@"customStrengthSPTnextTrackButton"];
-		[preferences registerObject:&customStrengthSPTrepeatButtonControl default:@"0" forKey:@"customStrengthSPTrepeatButton"];
-		[preferences registerObject:&customStrengthSPTshuffleButtonControl default:@"0" forKey:@"customStrengthSPTshuffleButton"];
-		[preferences registerObject:&customStrengthSPTqueueButtonControl default:@"0" forKey:@"customStrengthSPTqueueButton"];
-		[preferences registerObject:&customStrengthSPTsliderControl default:@"0" forKey:@"customStrengthSPTslider"];
-		[preferences registerObject:&customStrengthSPTfreeTierButtonControl default:@"0" forKey:@"customStrengthSPTfreeTierButton"];
-		[preferences registerObject:&customStrengthSPTavailableDevicesButtonControl default:@"0" forKey:@"customStrengthSPTavailableDevicesButton"];
-		[preferences registerObject:&customStrengthSPTnowPlayingLabelControl default:@"0" forKey:@"customStrengthSPTnowPlayingLabel"];
-		[preferences registerObject:&customStrengthSPTplaylistButtonsControl default:@"0" forKey:@"customStrengthSPTplaylistButtons"];
-	}
+    if (enableSpotifySection) {
+        [preferences registerBool:&SPTplayButtonSwitch default:NO forKey:@"SPTplayButton"];
+        [preferences registerBool:&SPTplayBarButtonSwitch default:NO forKey:@"SPTplayBarButton"];
+        [preferences registerBool:&SPTpreviousTrackButtonSwitch default:NO forKey:@"SPTpreviousTrackButton"];
+        [preferences registerBool:&SPTnextTrackButtonSwitch default:NO forKey:@"SPTnextTrackButton"];
+        [preferences registerBool:&SPTrepeatButtonSwitch default:NO forKey:@"SPTrepeatButton"];
+        [preferences registerBool:&SPTshuffleButtonSwitch default:NO forKey:@"SPTshuffleButton"];
+        [preferences registerBool:&SPTqueueButtonSwitch default:NO forKey:@"SPTqueueButton"];
+        [preferences registerBool:&SPTsliderSwitch default:NO forKey:@"SPTslider"];
+        [preferences registerBool:&SPTfreeTierButtonSwitch default:NO forKey:@"SPTfreeTierButton"];
+        [preferences registerBool:&SPTavailableDevicesButtonSwitch default:NO forKey:@"SPTavailableDevicesButton"];
+        [preferences registerBool:&SPTnowPlayingLabelSwitch default:NO forKey:@"SPTnowPlayingLabel"];
+        [preferences registerBool:&SPTplaylistButtonsSwitch default:NO forKey:@"SPTplaylistButtons"];
+        [preferences registerObject:&customStrengthSPTplayButtonControl default:@"0" forKey:@"customStrengthSPTplayButton"];
+        [preferences registerObject:&customStrengthSPTplayBarButtonControl default:@"0" forKey:@"customStrengthSPTplayBarButton"];
+        [preferences registerObject:&customStrengthSPTpreviousTrackButtonControl default:@"0" forKey:@"customStrengthSPTpreviousTrackButton"];
+        [preferences registerObject:&customStrengthSPTnextTrackButtonControl default:@"0" forKey:@"customStrengthSPTnextTrackButton"];
+        [preferences registerObject:&customStrengthSPTrepeatButtonControl default:@"0" forKey:@"customStrengthSPTrepeatButton"];
+        [preferences registerObject:&customStrengthSPTshuffleButtonControl default:@"0" forKey:@"customStrengthSPTshuffleButton"];
+        [preferences registerObject:&customStrengthSPTqueueButtonControl default:@"0" forKey:@"customStrengthSPTqueueButton"];
+        [preferences registerObject:&customStrengthSPTsliderControl default:@"0" forKey:@"customStrengthSPTslider"];
+        [preferences registerObject:&customStrengthSPTfreeTierButtonControl default:@"0" forKey:@"customStrengthSPTfreeTierButton"];
+        [preferences registerObject:&customStrengthSPTavailableDevicesButtonControl default:@"0" forKey:@"customStrengthSPTavailableDevicesButton"];
+        [preferences registerObject:&customStrengthSPTnowPlayingLabelControl default:@"0" forKey:@"customStrengthSPTnowPlayingLabel"];
+        [preferences registerObject:&customStrengthSPTplaylistButtonsControl default:@"0" forKey:@"customStrengthSPTplaylistButtons"];
+    }
 
     if (enabled && enableSpotifySection) {
-		hapticLVL = [hapticLevel intValue];
-		delayLVL = [delayLevel doubleValue];
-		selectedLegacyMode = [legacyLevel intValue];
-		customLegacyDuration = [customlegacyDurationLevel doubleValue];
-		customLegacyStrength = [customlegacyStrengthLevel doubleValue];
-		%init(Spotify);
-		return;
+        hapticLVL = [hapticLevel intValue];
+        delayLVL = [delayLevel doubleValue];
+        selectedLegacyMode = [legacyLevel intValue];
+        customLegacyDuration = [customlegacyDurationLevel doubleValue];
+        customLegacyStrength = [customlegacyStrengthLevel doubleValue];
+        %init(Spotify);
+        return;
     }
 
 }

@@ -71,12 +71,12 @@ BOOL enableOtherHardwareActionsSection = NO;
 
 - (void)toggleState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]) {
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]) {
         enableOtherHardwareActionsSection = YES;
         [preferences setBool:enableOtherHardwareActionsSection forKey:@"EnableOtherHardwareActionsSection"];
         [self toggleCellState:YES];
@@ -87,7 +87,7 @@ BOOL enableOtherHardwareActionsSection = NO;
     } else if ([[preferences objectForKey:@"EnableOtherHardwareActionsSection"] isEqual:@(NO)]) {
         enableOtherHardwareActionsSection = YES;
         [preferences setBool:enableOtherHardwareActionsSection forKey:@"EnableOtherHardwareActionsSection"];
-        [self toggleCellState:YES];   
+        [self toggleCellState:YES];
     } else if ([[preferences objectForKey:@"EnableOtherHardwareActionsSection"] isEqual:@(YES)]) {
         enableOtherHardwareActionsSection = NO;
         [preferences setBool:enableOtherHardwareActionsSection forKey:@"EnableOtherHardwareActionsSection"];
@@ -98,12 +98,12 @@ BOOL enableOtherHardwareActionsSection = NO;
 
 - (void)setEnableSwitchState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]){
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]){
         [[self enableSwitch] setOn:NO animated:YES];
         [self toggleCellState:NO];
     } else if (![allKeys containsObject:@"EnableOtherHardwareActionsSection"]) {
@@ -121,12 +121,12 @@ BOOL enableOtherHardwareActionsSection = NO;
 
 - (void)setCellState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]){
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]){
         [self toggleCellState:NO];
     } else if (![allKeys containsObject:@"EnableOtherHardwareActionsSection"]) {
         [self toggleCellState:NO];

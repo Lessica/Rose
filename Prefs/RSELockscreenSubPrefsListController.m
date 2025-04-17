@@ -71,12 +71,12 @@ BOOL enableLockscreenSection = NO;
 
 - (void)toggleState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]) {
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]) {
         enableLockscreenSection = YES;
         [preferences setBool:enableLockscreenSection forKey:@"EnableLockscreenSection"];
         [self toggleCellState:YES];
@@ -87,7 +87,7 @@ BOOL enableLockscreenSection = NO;
     } else if ([[preferences objectForKey:@"EnableLockscreenSection"] isEqual:@(NO)]) {
         enableLockscreenSection = YES;
         [preferences setBool:enableLockscreenSection forKey:@"EnableLockscreenSection"];
-        [self toggleCellState:YES];   
+        [self toggleCellState:YES];
     } else if ([[preferences objectForKey:@"EnableLockscreenSection"] isEqual:@(YES)]) {
         enableLockscreenSection = NO;
         [preferences setBool:enableLockscreenSection forKey:@"EnableLockscreenSection"];
@@ -98,12 +98,12 @@ BOOL enableLockscreenSection = NO;
 
 - (void)setEnableSwitchState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]){
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]){
         [[self enableSwitch] setOn:NO animated:YES];
         [self toggleCellState:NO];
     } else if (![allKeys containsObject:@"EnableLockscreenSection"]) {
@@ -121,12 +121,12 @@ BOOL enableLockscreenSection = NO;
 
 - (void)setCellState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]){
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]){
         [self toggleCellState:NO];
     } else if (![allKeys containsObject:@"EnableLockscreenSection"]) {
         [self toggleCellState:NO];

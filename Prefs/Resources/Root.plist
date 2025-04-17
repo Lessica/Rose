@@ -19,22 +19,22 @@
 			<key>height</key>
 			<real>57</real>
 		</dict>
-		
+
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
 			<string>Taptic Feedback Strength</string>
-			<key>footerText</key>
+			<!--key>footerText</key>
 			<string>iPhone 7/7+ And Up</string>
 			<key>isStaticText</key>
-			<true/>
+			<true/-->
 		</dict>
-		<dict>
+		<!--dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<false/>
+			<true/>
 			<key>defaults</key>
 			<string>love.litten.rosepreferences</string>
 			<key>key</key>
@@ -43,7 +43,7 @@
 			<string>Use Taptic Feedback</string>
 			<key>PostNotification</key>
 			<string>love.litten.rosepreferences/ReloadPrefs</string>
-		</dict>
+		</dict-->
 		<dict>
 			<key>cell</key>
 			<string>PSSegmentCell</string>
@@ -75,7 +75,7 @@
 			<string>love.litten.rosepreferences/ReloadPrefs</string>
 		</dict>
 
-		<dict>
+		<!--dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
@@ -124,9 +124,9 @@
 			<string>3</string>
 			<key>PostNotification</key>
 			<string>love.litten.rosepreferences/ReloadPrefs</string>
-		</dict>
+		</dict-->
 
-		<dict>
+		<!--dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
@@ -183,7 +183,7 @@
  			<string>RSELegacySettingsSubPrefsListController</string>
  			<key>RSESub</key>
  			<string>legacyCustomSettings</string>
- 		</dict>
+ 		</dict-->
 
 		<dict>
 			<key>cell</key>

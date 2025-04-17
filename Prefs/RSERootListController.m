@@ -30,18 +30,18 @@ UIImpactFeedbackGenerator* gen;
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,10,10)];
         self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.titleLabel.text = @"1.0.9";
+        self.titleLabel.text = @"1.1.0";
         self.titleLabel.textColor = [UIColor whiteColor];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         [self.navigationItem.titleView addSubview:self.titleLabel];
 
         self.iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,10,10)];
         self.iconView.contentMode = UIViewContentModeScaleAspectFit;
-        self.iconView.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/RosePrefs.bundle/icon@2x.png"];
+        self.iconView.image = [UIImage imageWithContentsOfFile:SZ_JBROOT_NS(@"/Library/PreferenceBundles/RosePrefs.bundle/icon@2x.png")];
         self.iconView.translatesAutoresizingMaskIntoConstraints = NO;
         self.iconView.alpha = 0.0;
         [self.navigationItem.titleView addSubview:self.iconView];
-        
+
         [NSLayoutConstraint activateConstraints:@[
             [self.titleLabel.topAnchor constraintEqualToAnchor:self.navigationItem.titleView.topAnchor],
             [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.navigationItem.titleView.leadingAnchor],
@@ -60,13 +60,13 @@ UIImpactFeedbackGenerator* gen;
 
 - (NSArray *)specifiers {
 
-	if (_specifiers == nil) {
-		_specifiers = [[self loadSpecifiersFromPlistName:@"Root" target:self] copy];
-        
-	}
+    if (_specifiers == nil) {
+        _specifiers = [[self loadSpecifiersFromPlistName:@"Root" target:self] copy];
 
-	return _specifiers;
-    
+    }
+
+    return _specifiers;
+
 }
 
 - (void)viewDidLoad {
@@ -76,7 +76,7 @@ UIImpactFeedbackGenerator* gen;
     self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,200)];
     self.headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,200,200)];
     self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
-    self.headerImageView.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/RosePrefs.bundle/Banner.png"];
+    self.headerImageView.image = [UIImage imageWithContentsOfFile:SZ_JBROOT_NS(@"/Library/PreferenceBundles/RosePrefs.bundle/Banner.png")];
     self.headerImageView.translatesAutoresizingMaskIntoConstraints = NO;
     self.headerImageView.clipsToBounds = YES;
 
@@ -150,7 +150,7 @@ UIImpactFeedbackGenerator* gen;
         }];
 
     }
-    
+
     if (offsetY > 0) offsetY = 0;
     self.headerImageView.frame = CGRectMake(0, offsetY, self.headerView.frame.size.width, 200 - offsetY);
 
@@ -160,12 +160,12 @@ UIImpactFeedbackGenerator* gen;
 
     [[self enableSwitch] setEnabled:NO];
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences *preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (!([[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"])) {
+
+    if (!([[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")])) {
         enabled = YES;
         [preferences setBool:enabled forKey:@"Enabled"];
         [self respring];
@@ -187,12 +187,12 @@ UIImpactFeedbackGenerator* gen;
 
 - (void)setEnableSwitchState {
 
-    NSString* path = [NSString stringWithFormat:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"];
+    NSString* path = SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist");
     NSMutableDictionary* dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSSet* allKeys = [NSSet setWithArray:[dictionary allKeys]];
     HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
-    
-    if (!([[NSFileManager defaultManager] fileExistsAtPath:@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist"]))
+
+    if (!([[NSFileManager defaultManager] fileExistsAtPath:SZ_JBROOT_NS(@"/var/mobile/Library/Preferences/love.litten.rosepreferences.plist")]))
         [[self enableSwitch] setOn:NO animated:YES];
     else if (!([allKeys containsObject:@"Enabled"]))
         [[self enableSwitch] setOn:NO animated:YES];
@@ -206,19 +206,19 @@ UIImpactFeedbackGenerator* gen;
 - (void)resetPrompt {
 
     UIAlertController *resetAlert = [UIAlertController alertControllerWithTitle:@"Rose"
-	message:@"Do You Really Want To Reset Your Preferences?"
-	preferredStyle:UIAlertControllerStyleActionSheet];
-	
+    message:@"Do You Really Want To Reset Your Preferences?"
+    preferredStyle:UIAlertControllerStyleActionSheet];
+
     UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:@"Yaw" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
             [self resetPreferences];
-	}];
+    }];
 
-	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Naw" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Naw" style:UIAlertActionStyleCancel handler:nil];
 
-	[resetAlert addAction:confirmAction];
-	[resetAlert addAction:cancelAction];
+    [resetAlert addAction:confirmAction];
+    [resetAlert addAction:cancelAction];
 
-	[self presentViewController:resetAlert animated:YES completion:nil];
+    [self presentViewController:resetAlert animated:YES completion:nil];
 
 }
 
@@ -233,27 +233,27 @@ UIImpactFeedbackGenerator* gen;
 
 - (void)setPreferenceValue:(id)value specifier:(PSSpecifier*)specifier{
 
-	[super setPreferenceValue:value specifier:specifier];
-	
+    [super setPreferenceValue:value specifier:specifier];
+
     if ([specifier.properties[@"key"] isEqualToString:@"TapticStrength"] && [value isEqual:@(0)]) {
         UIImpactFeedbackGenerator* gen = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
-		[gen prepare];
+        [gen prepare];
         [gen impactOccurred];
     } else if ([specifier.properties[@"key"] isEqualToString:@"TapticStrength"] && [value isEqual:@(1)]) {
         UIImpactFeedbackGenerator* gen = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
-		[gen prepare];
+        [gen prepare];
         [gen impactOccurred];
     } else if ([specifier.properties[@"key"] isEqualToString:@"TapticStrength"] && [value isEqual:@(2)]) {
         UIImpactFeedbackGenerator* gen = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
-		[gen prepare];
+        [gen prepare];
         [gen impactOccurred];
     } else if ([specifier.properties[@"key"] isEqualToString:@"TapticStrength"] && [value isEqual:@(3)]) {
         UIImpactFeedbackGenerator* gen = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleSoft];
-		[gen prepare];
+        [gen prepare];
         [gen impactOccurred];
     } else if ([specifier.properties[@"key"] isEqualToString:@"TapticStrength"] && [value isEqual:@(4)]) {
         UIImpactFeedbackGenerator* gen = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleRigid];
-		[gen prepare];
+        [gen prepare];
         [gen impactOccurred];
     } else if ([specifier.properties[@"key"] isEqualToString:@"HapticStrength"] && [value isEqual:@(0)]) {
         AudioServicesPlaySystemSound(1519);
@@ -266,17 +266,20 @@ UIImpactFeedbackGenerator* gen;
 }
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    
+
     if (event.type == UIEventSubtypeMotionShake) {
         HBPreferences* preferences = [[HBPreferences alloc] initWithIdentifier: @"love.litten.rosepreferences"];
         enableTapticEngineSwitch = [[preferences objectForKey:@"enableTapticEngine"] boolValue];
         enableHapticEngineSwitch = [[preferences objectForKey:@"enableHapticEngine"] boolValue];
         enableLegacyEngineSwitch = [[preferences objectForKey:@"enableLegacyEngine"] boolValue];
+        enableTapticEngineSwitch = YES;
+        enableHapticEngineSwitch = NO;
+        enableLegacyEngineSwitch = NO;
         int tapticLVL = [[preferences objectForKey:@"TapticStrength"] intValue];
-		int hapticLVL = [[preferences objectForKey:@"HapticStrength"] intValue];
-		int selectedLegacyMode = [[preferences objectForKey:@"LegacyStrength"] intValue];
-		double customLegacyDuration = [[preferences objectForKey:@"customLegacyDuration"] doubleValue];
-		double customLegacyStrength = [[preferences objectForKey:@"customLegacyStrength"] doubleValue];
+        int hapticLVL = [[preferences objectForKey:@"HapticStrength"] intValue];
+        int selectedLegacyMode = [[preferences objectForKey:@"LegacyStrength"] intValue];
+        double customLegacyDuration = [[preferences objectForKey:@"customLegacyDuration"] doubleValue];
+        double customLegacyStrength = [[preferences objectForKey:@"customLegacyStrength"] doubleValue];
 
         if (enableTapticEngineSwitch || enableHapticEngineSwitch) {
             [libRose prepareForHaptic:enableTapticEngineSwitch :enableHapticEngineSwitch :enableLegacyEngineSwitch :tapticLVL :hapticLVL];
