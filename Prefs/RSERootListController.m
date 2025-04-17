@@ -32,8 +32,12 @@ UIImpactFeedbackGenerator* gen;
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,10,10)];
         self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        self.titleLabel.text = @"1.1.0";
-        self.titleLabel.textColor = [UIColor whiteColor];
+        if (@available(iOS 15, *)) {
+            self.titleLabel.alpha = 0.0;
+        } else {
+            self.titleLabel.text = @"1.1.0";
+            self.titleLabel.textColor = [UIColor whiteColor];
+        }
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         [self.navigationItem.titleView addSubview:self.titleLabel];
 
@@ -41,7 +45,10 @@ UIImpactFeedbackGenerator* gen;
         self.iconView.contentMode = UIViewContentModeScaleAspectFit;
         self.iconView.image = [UIImage imageWithContentsOfFile:SZ_JBROOT_NS(@"/Library/PreferenceBundles/RosePrefs.bundle/icon@2x.png")];
         self.iconView.translatesAutoresizingMaskIntoConstraints = NO;
-        self.iconView.alpha = 0.0;
+        if (@available(iOS 15, *)) {}
+        else {
+            self.iconView.alpha = 0.0;
+        }
         [self.navigationItem.titleView addSubview:self.iconView];
 
         [NSLayoutConstraint activateConstraints:@[
@@ -75,22 +82,25 @@ UIImpactFeedbackGenerator* gen;
 
     [super viewDidLoad];
 
-    self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,200)];
-    self.headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,200,200)];
-    self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
-    self.headerImageView.image = [UIImage imageWithContentsOfFile:SZ_JBROOT_NS(@"/Library/PreferenceBundles/RosePrefs.bundle/Banner.png")];
-    self.headerImageView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.headerImageView.clipsToBounds = YES;
+    if (@available(iOS 15, *)) {}
+    else {
+        self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,200)];
+        self.headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,200,200)];
+        self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
+        self.headerImageView.image = [UIImage imageWithContentsOfFile:SZ_JBROOT_NS(@"/Library/PreferenceBundles/RosePrefs.bundle/Banner.png")];
+        self.headerImageView.translatesAutoresizingMaskIntoConstraints = NO;
+        self.headerImageView.clipsToBounds = YES;
 
-    [self.headerView addSubview:self.headerImageView];
-    [NSLayoutConstraint activateConstraints:@[
-        [self.headerImageView.topAnchor constraintEqualToAnchor:self.headerView.topAnchor],
-        [self.headerImageView.leadingAnchor constraintEqualToAnchor:self.headerView.leadingAnchor],
-        [self.headerImageView.trailingAnchor constraintEqualToAnchor:self.headerView.trailingAnchor],
-        [self.headerImageView.bottomAnchor constraintEqualToAnchor:self.headerView.bottomAnchor],
-    ]];
+        [self.headerView addSubview:self.headerImageView];
+        [NSLayoutConstraint activateConstraints:@[
+            [self.headerImageView.topAnchor constraintEqualToAnchor:self.headerView.topAnchor],
+            [self.headerImageView.leadingAnchor constraintEqualToAnchor:self.headerView.leadingAnchor],
+            [self.headerImageView.trailingAnchor constraintEqualToAnchor:self.headerView.trailingAnchor],
+            [self.headerImageView.bottomAnchor constraintEqualToAnchor:self.headerView.bottomAnchor],
+        ]];
 
-    _table.tableHeaderView = self.headerView;
+        _table.tableHeaderView = self.headerView;
+    }
 
 }
 
@@ -108,10 +118,13 @@ UIImpactFeedbackGenerator* gen;
     CGRect frame = self.table.bounds;
     frame.origin.y = -frame.size.height;
 
-    self.navigationController.navigationController.navigationBar.barTintColor = [UIColor colorWithRed: 0.62 green: 0.67 blue: 0.98 alpha: 1.00];
-    [self.navigationController.navigationController.navigationBar setShadowImage: [UIImage new]];
-    self.navigationController.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationController.navigationBar.translucent = YES;
+    if (@available(iOS 15, *)) {}
+    else {
+        self.navigationController.navigationController.navigationBar.barTintColor = [UIColor colorWithRed: 0.62 green: 0.67 blue: 0.98 alpha: 1.00];
+        [self.navigationController.navigationController.navigationBar setShadowImage: [UIImage new]];
+        self.navigationController.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+        self.navigationController.navigationController.navigationBar.translucent = YES;
+    }
 
     self.enableSwitch.enabled = YES;
 
@@ -121,7 +134,10 @@ UIImpactFeedbackGenerator* gen;
 
     [super viewDidAppear:animated];
 
-    [self.navigationController.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    if (@available(iOS 15, *)) {}
+    else {
+        [self.navigationController.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    }
 
     [self setEnableSwitchState];
 
@@ -136,6 +152,10 @@ UIImpactFeedbackGenerator* gen;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+    if (@available(iOS 15, *)) {
+        return;
+    }
 
     CGFloat offsetY = scrollView.contentOffset.y;
 

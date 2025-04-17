@@ -6,6 +6,12 @@
 	<array>
 
 		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Authors</string>
+		</dict>
+		<dict>
 			<key>cellClass</key>
 			<string>DuoTwitterCell</string>
 			<key>firstLabel</key>
@@ -281,7 +287,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Rose By Litten, Icon And Banner By taki</string>
+			<string>Rose v1.1 by Litten, Icon and Banner by taki.</string>
 			<key>isStaticText</key>
 			<true/>
 		</dict>
