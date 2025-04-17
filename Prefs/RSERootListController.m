@@ -227,15 +227,18 @@ UIImpactFeedbackGenerator* gen;
 
 - (void)resetPrompt {
 
-    UIAlertController *resetAlert = [UIAlertController alertControllerWithTitle:@"Rose"
-    message:@"Do You Really Want To Reset Your Preferences?"
+    NSBundle *clsBundle = [NSBundle bundleForClass:[self class]];
+    UIAlertController *resetAlert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTableInBundle(@"Reset", @"Rose", clsBundle, nil)
+    message:NSLocalizedStringFromTableInBundle(@"Are you sure you want to reset all preferences?", @"Rose", clsBundle, nil)
     preferredStyle:UIAlertControllerStyleActionSheet];
 
-    UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:@"Yaw" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-            [self resetPreferences];
+    UIAlertAction* confirmAction = [UIAlertAction actionWithTitle:NSLocalizedStringFromTableInBundle(@"Confirm", @"Rose", clsBundle, nil)
+    style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+        [self resetPreferences];
     }];
 
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Naw" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedStringFromTableInBundle(@"Cancel", @"Rose", clsBundle, nil)
+    style:UIAlertActionStyleCancel handler:nil];
 
     [resetAlert addAction:confirmAction];
     [resetAlert addAction:cancelAction];
