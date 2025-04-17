@@ -25,6 +25,16 @@
 			<key>height</key>
 			<real>57</real>
 		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>SingleContactCell</string>
+			<key>displayName</key>
+			<string>82Flex</string>
+			<key>username</key>
+			<string>Lessica</string>
+			<key>height</key>
+			<integer>58</integer>
+		</dict>
 
 		<dict>
 			<key>cell</key>
@@ -239,7 +249,38 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Contributions</string>
+			<string>Maintainer</string>
+			<key>footerText</key>
+			<string>Latest maintainer of Rose.</string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>HBLinkTableCell</string>
+			<key>label</key>
+			<string>Made with ♥ by OwnGoal Studio</string>
+			<key>subtitle</key>
+			<string>Please support our paid works, thank you!</string>
+			<key>url</key>
+			<string>https://havoc.app/search/82Flex</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Original Author</string>
+			<key>footerText</key>
+			<string>Rose v1.1 by Litten, Icon and Banner by taki.</string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>HBLinkTableCell</string>
+			<key>label</key>
+			<string>Source Code</string>
+			<key>subtitle</key>
+			<string>Find it on my GitHub.</string>
+			<key>url</key>
+			<string>https://github.com/Lessica/Rose</string>
 		</dict>
 		<dict>
  			<key>cell</key>
@@ -254,81 +295,9 @@
 
 		<dict>
 			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>label</key>
-			<string>You Might Like:</string>
-		</dict>
-		<dict>
-			<key>cellClass</key>
-			<string>HBLinkTableCell</string>
-			<key>label</key>
-			<string>Lisa</string>
-			<key>subtitle</key>
-			<string>Full incoming OLED notifications</string>
-			<key>icon</key>
-			<string>Lisa.png</string>
-			<key>url</key>
-			<string>https://repo.litten.love/depictions/Lisa/</string>
-		</dict>
-		<dict>
-			<key>cellClass</key>
-			<string>HBLinkTableCell</string>
-			<key>label</key>
-			<string>Dress</string>
-			<key>subtitle</key>
-			<string>Dress up your lockscreen</string>
-			<key>icon</key>
-			<string>Dress.png</string>
-			<key>url</key>
-			<string>https://repo.litten.love/depictions/Dress/</string>
-		</dict>
-
-		<dict>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>footerText</key>
-			<string>Rose v1.1 by Litten, Icon and Banner by taki.</string>
-			<key>isStaticText</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>cellClass</key>
-			<string>HBLinkTableCell</string>
-			<key>label</key>
-			<string>Discord</string>
-			<key>subtitle</key>
-			<string>Chat with us 👾</string>
-			<key>url</key>
-			<string>https://discord.gg/tKUPZrS7ve</string>
-		</dict>
-		<dict>
-			<key>cellClass</key>
-			<string>HBLinkTableCell</string>
-			<key>label</key>
-			<string>Source Code</string>
-			<key>subtitle</key>
-			<string>GitHub 🌹</string>
-			<key>url</key>
-			<string>https://github.com/schneelittchen/Rose</string>
-		</dict>
-		<dict>
-			<key>cellClass</key>
-			<string>HBLinkTableCell</string>
-			<key>label</key>
-			<string>Donate To Litten</string>
-			<key>subtitle</key>
-			<string>Appreciated 💝</string>
-			<key>url</key>
-			<string>https://paypal.me/Litteeen</string>
-		</dict>
-
-		<dict>
-			<key>cell</key>
 			<key>PSGroupCell</key>
 			<key>footerText</key>
 			<string>princess of daydreaming</string>
-			<key>isStaticText</key>
-			<true/>
 			<key>footerAlignment</key>
 			<real>1</real>
 		</dict>

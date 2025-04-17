@@ -32,12 +32,6 @@
 
 }
 
-- (UIColor *)tableViewCellSeparatorColor {
-
-    return [UIColor colorWithWhite:0 alpha:0];
-
-}
-
 - (UIColor *)navigationBarBackgroundColor {
 
     return [UIColor colorWithRed: 0.62 green: 0.67 blue: 0.98 alpha: 1.00];
