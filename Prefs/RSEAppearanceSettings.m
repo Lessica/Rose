@@ -14,6 +14,12 @@
 
 }
 
+- (UIStatusBarStyle)statusBarStyle {
+
+    return UIStatusBarStyleLightContent;
+
+}
+
 - (UIColor *)navigationBarTitleColor {
 
     return [UIColor whiteColor];
@@ -39,7 +45,7 @@
 }
 
 - (BOOL)translucentNavigationBar {
-    
+
     return YES;
 
 }
