@@ -1,4 +1,6 @@
-#include "RSERootListController.h"
+#import "RSERootListController.h"
+#import "FBSSystemService.h"
+#import "SBSRelaunchAction.h"
 #import "../Tweak/Rose.h"
 
 UIBlurEffect* blur;
@@ -326,14 +328,28 @@ UIImpactFeedbackGenerator* gen;
 
 }
 
+static void RSEUtilRespring(BOOL useSnapshot, BOOL restartRenderServer) {
+
+    SBSRelaunchActionOptions options = (useSnapshot
+                                        ? SBSRelaunchActionOptionsSnapshotTransition
+                                        : SBSRelaunchActionOptionsFadeToBlackTransition);
+
+    if (restartRenderServer) {
+        options |= SBSRelaunchActionOptionsRestartRenderServer;
+    }
+
+    SBSRelaunchAction *relaunchAction = [SBSRelaunchAction
+                                         actionWithReason:@""
+                                         options:options
+                                         targetURL:[NSURL URLWithString:@"prefs:root=Rose"]];
+
+    [[FBSSystemService sharedService] sendActions:[NSSet setWithObject:relaunchAction] withResult:nil];
+
+}
+
 - (void)respringUtil {
 
-    NSTask* task = [[NSTask alloc] init];
-    [task setLaunchPath:@"/usr/bin/sbreload"];
-
-    [HBRespringController respringAndReturnTo:[NSURL URLWithString:@"prefs:root=Rose"]];
-
-    [task launch];
+    RSEUtilRespring(YES, NO);
 
 }
 

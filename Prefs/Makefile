@@ -4,7 +4,7 @@ RosePrefs_CFLAGS += -fobjc-arc -Iinclude -DTHEOS_LEAN_AND_MEAN
 RosePrefs_LDFLAGS += -L$(THEOS_OBJ_DIR)
 RosePrefs_FRAMEWORKS += UIKit
 RosePrefs_LIBRARIES += Rose
-RosePrefs_PRIVATE_FRAMEWORKS += Preferences
+RosePrefs_PRIVATE_FRAMEWORKS += FrontBoardServices Preferences SpringBoardServices
 RosePrefs_EXTRA_FRAMEWORKS += Cephei CepheiPrefs
 RosePrefs_INSTALL_PATH += /Library/PreferenceBundles
 
