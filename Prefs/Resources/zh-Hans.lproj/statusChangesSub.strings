@@ -1,0 +1,17 @@
+"Haptic Feedback When…" = "触觉反馈时机…";
+"Unlocked/NC" = "解锁/通知中心";
+"Locked" = "锁定";
+"Authenticated with Touch/Face ID" = "通过触控或面容 ID 验证";
+"Call Connects/Disconnects" = "通话接通/断开";
+"Custom Strength Settings" = "自定义强度设置";
+"Custom Unlock Strength" = "自定义解锁触感强度";
+"Custom Lock Strength" = "自定义锁定触感强度";
+"Custom Authetication Strength" = "自定义验证触感强度";
+"Custom Call Strength" = "自定义通话触感强度";
+"None" = "无";
+"Light: Taptic Engine" = "轻微：Taptic 引擎";
+"Medium: Taptic Engine" = "中等：Taptic 引擎";
+"Strong: Taptic Engine" = "强烈：Taptic 引擎";
+"Soft: Taptic Engine" = "柔和：Taptic 引擎";
+"Rigid: Taptic Engine" = "刚硬：Taptic 引擎";
+"Rose" = "Rose";

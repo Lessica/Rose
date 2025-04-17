@@ -21,7 +21,7 @@
 			<key>key</key>
 			<string>forceTouchDismiss</string>
 			<key>label</key>
-			<string>3DTouch Action/Dismisses</string>
+			<string>3D Touch Action/Dismisses</string>
 			<key>PostNotification</key>
 			<string>love.litten.rosepreferences/ReloadPrefs</string>
 		</dict>
@@ -112,7 +112,7 @@
 			<key>defaults</key>
 			<string>love.litten.rosepreferences</string>
 			<key>label</key>
-			<string>Custom 3D Touch Strength</string>
+			<string>Custom 3D Touch Strength</string>
 			<key>key</key>
 			<string>customStrengthForceTouch</string>
 			<key>validValues</key>

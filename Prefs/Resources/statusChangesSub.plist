@@ -49,7 +49,7 @@
 			<key>key</key>
 			<string>authentication</string>
 			<key>label</key>
-			<string>Autheticated With Touch/FaceID</string>
+			<string>Authenticated with Touch/Face ID</string>
 			<key>PostNotification</key>
 			<string>love.litten.rosepreferences/ReloadPrefs</string>
 		</dict>

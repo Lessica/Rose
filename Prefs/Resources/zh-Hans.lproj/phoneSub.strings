@@ -1,0 +1,17 @@
+"Haptic Feedback When…" = "触觉反馈时机…";
+"Tapping Dialer Number Pad Button" = "点按拨号键盘按钮";
+"Tapping Contacts Cell" = "点按联系人单元格";
+"Tapping Dialer Delete Button" = "点按拨号键盘删除按钮";
+"Tapping Dialer Call Button" = "点按拨号键盘通话按钮";
+"Custom Strength Settings" = "自定义强度设置";
+"Custom Dialer Number Pad Strength" = "自定义拨号键盘触感强度";
+"Custom Contacts Cell Strength" = "自定义联系人单元格触感强度";
+"Custom Dialer Delete Button Strength" = "自定义删除按钮触感强度";
+"Custom Dialer Call Button Strength" = "自定义通话按钮触感强度";
+"None" = "无";
+"Light: Taptic Engine" = "轻微：Taptic 引擎";
+"Medium: Taptic Engine" = "中等：Taptic 引擎";
+"Strong: Taptic Engine" = "强烈：Taptic 引擎";
+"Soft: Taptic Engine" = "柔和：Taptic 引擎";
+"Rigid: Taptic Engine" = "刚硬：Taptic 引擎";
+"Rose" = "Rose";

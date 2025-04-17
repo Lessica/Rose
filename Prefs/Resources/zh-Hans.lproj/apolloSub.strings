@@ -1,0 +1,17 @@
+"Haptic Feedback When…" = "触觉反馈时机…";
+"Tapping The Jump Bar" = "点按跳转栏";
+"Tapping The Floating Button" = "点按浮动按钮";
+"Tapping Most Elements" = "点按大多数元素";
+"Tapping UIButton Elements" = "点按 UIButton 元素";
+"Custom Strength Settings" = "自定义强度设置";
+"Custom Jump Bar Strength" = "自定义跳转栏强度";
+"Custom Floating Button Strength" = "自定义浮动按钮强度";
+"Custom Certain Elements Strength" = "自定义特定元素强度";
+"Custom UIButton Strength" = "自定义 UIButton 强度";
+"None" = "无";
+"Light: Taptic Engine" = "轻微：Taptic 引擎";
+"Medium: Taptic Engine" = "中等：Taptic 引擎";
+"Strong: Taptic Engine" = "强烈：Taptic 引擎";
+"Soft: Taptic Engine" = "柔和：Taptic 引擎";
+"Rigid: Taptic Engine" = "刚硬：Taptic 引擎";
+"Rose" = "Rose";

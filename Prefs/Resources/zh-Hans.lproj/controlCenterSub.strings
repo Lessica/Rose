@@ -1,0 +1,15 @@
+"Haptic Feedback When…" = "触觉反馈时机…";
+"Toggling Connectivity Toggle" = "切换连接开关";
+"Opening Control Center" = "打开控制中心";
+"Toggling CC Module" = "切换控制中心模块";
+"Custom Strength Settings" = "自定义强度设置";
+"Custom Connectivity Toggle Strength" = "自定义连接开关触感强度";
+"Custom Open Control Center Strength" = "自定义打开控制中心触感强度";
+"Custom CC Module Strength" = "自定义控制中心模块触感强度";
+"None" = "无";
+"Light: Taptic Engine" = "轻微：Taptic 引擎";
+"Medium: Taptic Engine" = "中等：Taptic 引擎";
+"Strong: Taptic Engine" = "强烈：Taptic 引擎";
+"Soft: Taptic Engine" = "柔和：Taptic 引擎";
+"Rigid: Taptic Engine" = "刚硬：Taptic 引擎";
+"Rose" = "Rose";
