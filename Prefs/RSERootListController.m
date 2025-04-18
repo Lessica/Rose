@@ -372,7 +372,7 @@ static void RSEUtilRespring(BOOL useSnapshot, BOOL restartRenderServer) {
 
 - (void)respringUtil {
 
-    RSEUtilRespring(YES, NO);
+    RSEUtilRespring(YES, YES);
 
 }
 
