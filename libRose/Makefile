@@ -2,7 +2,7 @@ LIBRARY_NAME := libRose
 libRose_USE_MODULES := 0
 libRose_FILES += $(wildcard *.m)
 libRose_CFLAGS += -Ipublic -Ioverlayheaders -I. -fobjc-arc -DTHEOS_LEAN_AND_MEAN
-libRose_FRAMEWORKS += UIKit AudioToolbox
+libRose_FRAMEWORKS += UIKit AudioToolbox CoreHaptics
 
 include $(THEOS)/makefiles/common.mk
 include $(THEOS_MAKE_PATH)/library.mk
